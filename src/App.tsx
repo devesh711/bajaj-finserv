@@ -86,7 +86,7 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center mb-4 md:mb-0">
             <Stethoscope className="h-10 w-10 text-white" />
-            <h1 className="ml-3 text-3xl font-bold text-white">MediSearch</h1>
+            <h1 className="ml-3 text-3xl font-bold text-white">Doc-Verse</h1>
           </div>
           <div className="w-full md:w-1/2">
             <SearchBar 
