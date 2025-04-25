@@ -57,7 +57,6 @@ const DoctorCard: React.FC<DoctorCardProps> = ({ doctor }) => {
                 data-testid="doctor-fee"
                 className="flex items-center text-sm text-gray-700"
               >
-                <DollarSign className="h-4 w-4 text-green-500 mr-1" />
                 <span>₹{doctor.fees} consultation fee</span>
               </div>
               
@@ -79,15 +78,12 @@ const DoctorCard: React.FC<DoctorCardProps> = ({ doctor }) => {
           </div>
           
           <div className="mt-4 sm:mt-0 flex-shrink-0 sm:flex sm:flex-col sm:items-end">
-            <button className="w-full sm:w-auto px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
-              Book Appointment
-            </button>
             <Link 
               to={`/doctor/${doctor.id}`}
               state={{ doctor }}
-              className="mt-2 inline-block px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition focus:outline-none focus:ring-2 focus:ring-gray-400"
+              className="w-full sm:w-auto px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
             >
-              View Details
+              Book Appointment
             </Link>
           </div>
         </div>
