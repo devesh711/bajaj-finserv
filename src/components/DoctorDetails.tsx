@@ -38,7 +38,7 @@ const DoctorDetails: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 animate-fadeIn">
         <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-blue-500"></div>
       </div>
     );
@@ -46,7 +46,7 @@ const DoctorDetails: React.FC = () => {
 
   if (error || !doctor) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
+      <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 animate-fadeIn">
         <p className="text-red-500 text-lg">{error || 'Doctor not found.'}</p>
         <Link to="/" className="mt-6 text-blue-600 hover:underline flex items-center">
           <ArrowLeft className="mr-1" /> Back to Doctors List
@@ -56,8 +56,8 @@ const DoctorDetails: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 py-10 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+    <div className="min-h-screen bg-gray-50 py-10 px-4 sm:px-6 lg:px-8 animate-fadeIn">
+      <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden transition transform hover:-translate-y-1 hover:shadow-xl duration-300">
         <div className="flex flex-col md:flex-row">
           <div className="md:w-1/3 bg-blue-50 flex items-center justify-center p-6">
             {doctor.photo ? (
