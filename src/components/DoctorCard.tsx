@@ -1,6 +1,7 @@
 import React from 'react';
 import { Doctor } from '../types';
 import { User, Video, Building, Award, DollarSign } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface DoctorCardProps {
   doctor: Doctor;
@@ -81,19 +82,13 @@ const DoctorCard: React.FC<DoctorCardProps> = ({ doctor }) => {
             <button className="w-full sm:w-auto px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
               Book Appointment
             </button>
-            
-            {doctor.rating && (
-              <div className="mt-2 flex items-center">
-                <div className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs font-medium">
-                  {doctor.rating} ★
-                </div>
-                {doctor.totalPatients && (
-                  <span className="ml-1 text-xs text-gray-500">
-                    ({doctor.totalPatients}+ consultations)
-                  </span>
-                )}
-              </div>
-            )}
+            <Link 
+              to={`/doctor/${doctor.id}`}
+              state={{ doctor }}
+              className="mt-2 inline-block px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition focus:outline-none focus:ring-2 focus:ring-gray-400"
+            >
+              View Details
+            </Link>
           </div>
         </div>
       </div>
