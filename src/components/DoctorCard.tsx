@@ -34,7 +34,7 @@ const DoctorCard: React.FC<DoctorCardProps> = ({ doctor }) => {
               data-testid="doctor-name"
               className="text-lg font-medium text-gray-900"
             >
-              Dr. {doctor.name}
+              {doctor.name}
             </h3>
             
             <p 
